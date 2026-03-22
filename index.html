@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mon Site</title>
+
+    <!-- Police Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<script>
+
+function ouvrirContact() {
+    document.getElementById("contactFormulaire").style.display = "flex";
+}
+
+function fermerContact() {
+    document.getElementById("contactFormulaire").style.display = "none";
+}
+
+</script>
+
+<body>
+
+    <!-- Menu fixe -->
+    <nav>
+        <a href="#" class="menu">Accueil</a>
+        <a href="#" class="menu" onclick="ouvrirContact()">Contact</a>
+    </nav>
+
+    <!-- Galerie d'images -->
+    <div class="galerie">
+        <div class="carte">
+            <div class="carte-interieur">
+                <div class="carte-face">
+                    <img src="Gestion comptable.jpg" alt="photo">
+                </div>
+                <div class="carte-arriere">Gestion clients, fournisseurs,relance, suivi bancaire, mise en place et/ou suivi de tableaux de bord...</div>
+            </div>
+        </div>
+
+        <div class="carte">
+            <div class="carte-interieur">
+                <div class="carte-face">
+                    <img src="gestion marketing.jpg" alt="photo">
+                </div>
+                <div class="carte-arriere">Plaquette, logo, amélioration de site internet, gestion réseaux sociaux, création de supports de communication...</div>
+            </div>
+        </div>
+
+        <div class="carte">
+            <div class="carte-interieur">
+                <div class="carte-face">
+                    <img src="gestion administrative.jpg" alt="photo">
+                </div>
+                <div class="carte-arriere">Gestion d'agenda, courrier, courriel, boite mail, contre-rendu, préparation de réunion, mise en place de procédure pour nouveaux arrivants...</div>
+            </div>
+        </div>
+
+        <div class="carte">
+            <div class="carte-interieur">
+                <div class="carte-face">
+                    <img src="formation.jpg" alt="photo">
+                </div>
+                <div class="carte-arriere">Outil bureautique: excel, word, outlook, canva...</div>
+            </div>
+        </div>
+    </div>
+<br><br><br>
+
+<div class="texte-dessous">
+   
+    <div class="texte-gauche">
+
+<p class="texte-special">
+Je m'appelle Audrey, <span class="important">fondatrice AD-aides&Démarches</span>.<br><br>
+
+Diplômée depuis plus de 25 ans, j'évolue dans les domaines de l'administration et de la comptabilité. Au fil des années, mes différents emplois m'ont permis de développer une solide expérience dans l'organisation, la gestion de documents et l'accompagnement.<br>
+
+<span class="important">Mon parcours ne s'arrête pas là</span>.<br>
+
+Française, j'ai fait le choix d'immigrer au Canada. Comme beaucoup de personnes qui entreprennent cette aventure, j'ai moi-même dû faire face à de nombreuses démarches, comprendre de nouveaux systèmes administratifs et m'adapter à un nouvel environnement.
+
+Cette expérience m'a profondément marquée. Elle m'a permis de comprendre à quel point il est facile de se sentir dépassé ou perdu.<br>
+
+C'est aussi à ce moment-là que j'ai réalisé une chose importante :  
+<span class="important">Être bien accompagné peut tout changer.</span><br><br>
+
+Grâce à mon expérience et à mon sens naturel de l'organisation, j'ai souvent aidé mon entourage à y voir plus clair dans les démarches, à structurer leurs documents ou à valoriser leur parcours professionnel.<br><br>
+
+<span class="important">C'est ainsi qu'est née AD-aides&Démarches.</span><br><br>
+
+Aujourd'hui, <span class="important">mon objectif est simple :</span> mettre mon expérience et mes compétences au service des autres pour les aider à avancer plus sereinement dans leurs projets et gagner en confiance.<br><br>
+
+Que ce soit pour :<br>
+Créer ou améliorer votre CV.<br>
+Être accompagnée pour vos réseaux sociaux.<br>
+Gagner en autonomie et en performance dans les outils bureautiques Word, Excel, Outlook, Canva...<br>
+
+Cette liste n'est pas fermée.<br>
+
+Je vous propose un accompagnement clair, humain et personnalisé.<br>
+
+Parce que derrière chaque dossier, chaque CV, chaque formation, il y a avant tout une personne, un parcours et un projet.<br><br>
+
+<span class="important">Je suis là pour vous aider à avancer avec plus de confiance et de sérénité.</span>
+</p>
+        
+        </div>
+    <div class="image-droite">
+        <img src="Audrey.PNG" alt="Description de l'image">
+    </div>
+</div>
+
+
+
+    </p>
+</div>
+
+    <script id="d6r0sl">
+const cartes = document.querySelectorAll(".carte-interieur");
+
+cartes.forEach(carte => {
+    carte.addEventListener("click", () => {
+
+        // remettre toutes les cartes à l'endroit
+        cartes.forEach(c => {
+            if (c !== carte) {
+                c.classList.remove("flip");
+            }
+        });
+
+        // retourner la carte cliquée
+        carte.classList.toggle("flip");
+    });
+});
+</script>
+
+<div id="contactFormulaire" class="contact-formulaire">
+
+    <div class="contact-contenu">
+        <span class="fermer" onclick="fermerContact()">✖</span>
+
+        <h2>CONTACT</h2>
+
+        <form action="mailto:a.aideetdemarches@gmail.com" method="post" enctype="text/plain">
+
+<input type="text" name="Nom" placeholder="Votre Nom" required>
+
+<input type="email" name="Email" placeholder="Votre Email" required>
+
+<textarea name="Message" placeholder="Votre message" rows="5" required></textarea>
+
+<button type="submit">Envoyer</button>
+
+</form>
+
+    </div>
+
+</div>
+    
+</body>
+</html>
